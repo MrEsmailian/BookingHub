@@ -1,0 +1,96 @@
+/* General setting -------------------------------------------- */
+html {
+    font-size: 50%;
+    font-family: Arial, sans-serif;
+}
+body {
+    color: orange;
+    height: fit-content;
+}
+* { box-sizing: border-box !important; }
+hr { border-color: rgba(255, 255, 255, 0.2) }
+.hidden { display: none }
+.F-small { font-size: 1.8rem }
+.F-medium { font-size: 2.1rem }
+.F-large { font-size: 2.4rem }
+.F-large-x { font-size: 2.7rem }
+.F-huge { font-size: 4rem }
+.C-White { color: #DDD !important;}
+.C-Black { color: black }
+.C-Gray { color: #333 }
+.C-Orange { color: orange !important;}
+a{ text-decoration: none !important;}
+/* General setting -------------------------------------------- */
+
+
+
+/* Title ------------------------------------------------------ */
+/* Mobile */
+header {
+    height: fit-content;
+    background-color: #101010;
+}
+header > a {
+    display: inline-block;
+    width: 17.75% !important;
+}
+/* Tablet */
+@media (min-width: 576px) {
+    header > a { width: 12.5% !important }
+}
+/* Laptop */
+@media (min-width: 768px) {
+    header > a { width: 5.5% !important }
+}
+/* Title ------------------------------------------------------ */
+
+
+
+
+/* Navigation bar --------------------------------------------- */
+/* Mobile */
+/* Tablet */
+/* Laptop */
+nav {
+    border-top: 1px solid rgba(100, 100, 100, 0.2);
+    border-bottom: 1px solid rgba(100, 100, 100, 0.2);
+    background-color: #101010;
+    text-align: center;
+}
+/* Navigation bar --------------------------------------------- */
+
+
+
+
+/* Input fields ----------------------------------------------- */
+.field {
+    height: 6rem;
+    position: relative;
+    background-color: inherit;
+}
+.field input {
+    position: absolute;
+    line-height: 4.5rem;
+    outline: 0;
+    background-color: inherit;
+    border: 2px solid orange;
+    box-shadow: 2px 0 3px orange;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.field .label-wrapper {
+    position: absolute;
+    top: 0.5rem;
+    left: 1.25rem;
+    pointer-events: none;
+}
+.field .label-text {
+    position: absolute;
+    transition: all 0.2s ease;
+}
+.field input:focus + .label-wrapper .label-text,
+.field input:valid + .label-wrapper .label-text {
+    padding: 0 0.5rem;
+    transform: translateX(-18%) translateY(-70%) scale(0.75);
+}
+/* Input fields ----------------------------------------------- */

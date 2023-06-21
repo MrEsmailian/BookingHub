@@ -1,0 +1,193 @@
+/* Filtering -------------------------------------------------- */
+/* Mobile */
+/* Tablet */
+aside {
+    display: inline-block;
+    height: fit-content;
+    border: 1px solid #151515;
+    background-color: #151515;
+}
+aside *:not([type="star-filter-input"]){
+    margin: 0.7rem auto;
+    text-align: center;
+    display: block;
+}
+aside h3 {
+    background: #202020;
+    font-weight: normal;
+}
+input {
+    border: 1px solid #252525;
+    border-radius: 5px;
+    background-color: #101010;
+}
+.common::-webkit-calendar-picker-indicator {
+    color: orange;
+    background-color: orange;
+    border-radius: 2px;
+}
+aside span { display: none !important }
+.star-filter-parent {
+    display: flex !important;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+.star-filter {
+    filter: url(#goo);
+    font-size: 4.75rem;
+}
+.submit-btn {
+    background-color: #171717;
+    border-radius: 6px;
+    border: 2px solid orange;
+}
+.cancel-btn {
+    background-color: #171717;
+    border-radius: 6px;
+    border: 2px solid #333;
+}
+/* Laptop */
+@media (min-width: 768px) {
+    aside span.distance { display: inline-block !important }
+    .common {
+        display: inline-block !important;
+        width: 42.5%;
+    }
+    .common::-webkit-calendar-picker-indicator { display: none }
+    .cancel-btn, .submit-btn { display: inline-block !important }
+    .star-filter { font-size: 3.75rem}
+}
+/* Filtering -------------------------------------------------- */
+
+
+
+/* List ------------------------------------------------ */
+/* Mobile */
+/* Tablet */
+/* Laptop */
+section > h1 {
+    font-size: 4rem;
+    border-bottom: 2px solid #DDD;
+}
+section > div > div {
+    height: 35vh
+}
+.image-star {
+    position: relative;
+    height: 75%;
+}
+.progressing-bar {
+    opacity: 0;
+    width: 1px;
+    height: 2%;
+    background-color: orange;
+}
+.image-star img {
+    display: inline-block;
+    width: 100%;
+    height: 98%;
+}
+.star-rating {
+    position: absolute;
+    bottom: 4%;
+    right: 2%;
+    z-index: 10;
+}
+.rating {
+    padding: 0 0.75rem;
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.star {
+    padding: 0 0.2rem;
+    background: orange;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.description { height: 20% }
+@media (max-width: 576px) {
+    @media (min-width: 425px) {
+        .image-star, .description {
+            margin-left: 8rem !important;
+            margin-right: 8rem !important;
+        }
+    }
+}
+/* Main content ----------------------------------------------- */
+
+
+
+/* pagination ------------------------------------------------- */
+/* Mobile */
+/* Tablet */
+/* Laptop */
+footer {
+    background-color: #101010;
+}
+.pagination .page-link {
+    color: orange;
+    background-color: #171717;
+    border-color: orange;
+    border-radius: 4px;
+    padding: 0.5rem 1.25rem;
+    font-size: 2rem;
+}
+.pagination .disabled .page-link {
+    color: #282828;
+    background-color: #171717;
+    border-color: #282828;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+@media (max-width: 576px) {
+    .pagination .page-link {
+        padding: 0.5rem 1rem;
+    }
+}
+/* pagination ------------------------------------------------- */
+
+
+
+/* Animations ------------------------------------------------- */
+/* Mobile */
+/* Tablet */
+/* Laptop */
+.hidden { display: none !important }
+
+@media (max-width: 425px) {
+    .hidden-sx {
+        display: none;
+    }
+}
+
+.star-filter-input:checked ~ label {
+    color: white;
+}
+
+nav ul li:hover {
+    border-bottom: 1px solid orange;
+}
+
+.pagination .page-link:hover, .pagination .page-link:focus, .pagination .page-link:active {
+    color: black;
+    background-color: orange;
+    border: 1px solid black;
+    transform: scale(1.25);
+    transition: transform 500ms ease;
+}
+
+input:hover, input:focus, input:active { border: 1px solid #DDD !important }
+
+.submit-btn:hover, .submit-btn:focus, .submit-btn:active,
+.cancel-btn:hover, .cancel-btn:focus, .cancel-btn:active {
+    transform: scale(1.2);
+    transition: transform 500ms ease;
+}
+
+.image-star:hover .progressing-bar{
+    opacity: 1;
+    width: 100%;
+    transition: width 3s cubic-bezier(0.5, 0.5, 1, 1);
+}
+/* Animations ------------------------------------------------- */
