@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SignUp/SignIn</title>
+    <title>Sign</title>
     <link rel="stylesheet" href="../CSS/Bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../CSS/general.css">
     <link rel="stylesheet" href="../CSS/style-sl.css">
@@ -13,53 +13,56 @@
     <div class="main container-fluid justify-content-center align-items-center px-0">
         <input type="checkbox" id="chk" aria-hidden="true">
         <div class="signup">
-            <form action="#">
+            <form id="sign">
                 <label for="chk" aria-hidden="true" class="F-huge fw-bold C-Orange d-flex justify-content-center">Sign up</label>
-                <div class="field col-8 d-flex mx-auto my-4 F-medium C-Orange justify-content-center my-3">
-                    <input type="text" name="user" id="UsrNaS" required class="F-medium C-White col-12 px-3">
-                    <label for="UsrNaS" class="label-wrapper m-0 p-0">
+                <div class="field col-8 d-flex mx-auto F-medium C-Orange justify-content-center my-3">
+                    <input type="text" name="user" id="SUsername" required minlength="3" class="F-medium C-White col-12 px-3">
+                    <label for="SUsername" class="label-wrapper m-0 p-0">
                         <span class="label-text C-White">Username</span>
                     </label>
                 </div>
-                <div class="field col-8 d-flex mx-auto my-4 F-medium C-Orange justify-content-center my-3">
-                    <input type="tel" name="phone" id="PoNuS" required class="F-medium C-White col-12 px-3">
-                    <label for="PoNuS" class="label-wrapper m-0 p-0">
+                <div class="field col-8 d-flex mx-auto F-medium C-Orange justify-content-center my-3">
+                    <input type="tel" name="phone" id="SPhone" required minlength="10" maxlength="12" class="F-medium C-White col-12 px-3">
+                    <label for="SPhone" class="label-wrapper m-0 p-0">
                         <span class="label-text C-White">Phone</span>
                     </label>
                 </div>
-                <div class="field col-8 d-flex mx-auto my-4 F-medium C-Orange justify-content-center my-3">
-                    <input type="text" name="email" id="EmS" required class="F-medium C-White col-12 px-3">
-                    <label for="EmS" class="label-wrapper m-0 p-0">
+                <div class="field col-8 d-flex mx-auto F-medium C-Orange justify-content-center my-3">
+                    <input type="text" name="email" id="SEmail" required minlength="" class="F-medium C-White col-12 px-3">
+                    <label for="SEmail" class="label-wrapper m-0 p-0">
                         <span class="label-text C-White">Email</span>
                     </label>
                 </div>
-                <div class="field col-8 d-flex mx-auto my-4 F-medium C-Orange justify-content-center my-3">
-                    <input type="password" name="password" id="PasS" required class="F-medium C-White col-12 px-3">
-                    <label for="PasS" class="label-wrapper m-0 p-0">
+                <div class="field col-8 d-flex mx-auto F-medium C-Orange justify-content-center my-3">
+                    <input type="password" name="password" id="SPassword" required class="F-medium C-White col-12 px-3">
+                    <label for="SPassword" class="label-wrapper m-0 p-0">
                         <span class="label-text C-White">Password</span>
                     </label>
                 </div>
-                <div class="field col-8 d-flex mx-auto my-4 F-medium C-Orange justify-content-center my-3">
-                    <input type="password" name="password" id="ConfS" required class="F-medium C-White col-12 px-3">
-                    <label for="ConfS" class="label-wrapper m-0 p-0">
+                <div class="field col-8 d-flex mx-auto F-medium C-Orange justify-content-center my-3">
+                    <input type="password" name="password" id="SConfirm" required class="F-medium C-White col-12 px-3">
+                    <label for="SConfirm" class="label-wrapper m-0 p-0">
                         <span class="label-text C-White">Confirm</span>
                     </label>
+                </div>
+                <div class="progress col-8 d-flex mx-auto my-3 bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-danger" id="strength" style="width: 1%; border-radius: 3px"></div>
                 </div>
                 <button type="submit" class="submit-btn d-flex col-8 mx-auto my-4 F-large-x justify-content-center">Send</button>
             </form>
         </div>
         <div class="login">
-            <form>
+            <form id="log">
                 <label for="chk" aria-hidden="true" class="F-huge fw-bold C-Orange d-flex justify-content-center">Login</label>
-                <div class="field col-8 d-flex mx-auto my-4 F-medium C-Orange justify-content-center my-3">
-                    <input type="text" name="user" id="UsrNaL" required class="F-medium C-White col-12 px-3">
-                    <label for="UsrNaL" class="label-wrapper m-0 p-0">
+                <div class="field col-8 d-flex mx-auto F-medium C-Orange justify-content-center my-3">
+                    <input type="text" name="user" id="LUsername" required class="F-medium C-White col-12 px-3">
+                    <label for="LUsername" class="label-wrapper m-0 p-0">
                         <span class="label-text C-White">Username</span>
                     </label>
                 </div>
-                <div class="field col-8 d-flex mx-auto my-4 F-medium C-Orange justify-content-center my-3">
-                    <input type="password" name="password" id="PasL" required class="F-medium C-White col-12 px-3">
-                    <label for="PasL" class="label-wrapper m-0 p-0">
+                <div class="field col-8 d-flex mx-auto F-medium C-Orange justify-content-center my-3">
+                    <input type="password" name="password" id="LPassword" required class="F-medium C-White col-12 px-3">
+                    <label for="LPassword" class="label-wrapper m-0 p-0">
                         <span class="label-text C-White">Password</span>
                     </label>
                 </div>
@@ -67,5 +70,6 @@
             </form>
         </div>
     </div>
+    <script src="../JS/script-sl.js"></script>
 </body>
 </html>
