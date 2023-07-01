@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" class="col-12">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/Bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../CSS/style-list.css">
+    <link rel="stylesheet" href="../CSS/general.css">
+</head>
+<body class="bg-black">
+<main>
+    <div class="container-fluid row justify-content-around mt-1 hidden-sx">
+        <a href="" target="_blank" class="C-Gray F-small d-flex link">Bug Report</a>
+        <a href="" target="_blank" class="C-Gray F-small d-flex link">About Us</a>
+        <a href="https://github.com/ConstantineMR" target="_blank" class="C-Gray F-small d-flex link">Support</a>
+    </div>
+    <header class="row mt-3 mx-0 p-2 px-sm-5 px-md-2 justify-content-between">
+        <img src="..\SRC\icon.jpg" alt="icon" class="col-9 col-sm-6 col-md-3 mx-1 ms-md-5 my-auto">
+        <a href="#" class="me-md-5 mt-lg-3 btn">
+            <svg xmlns="http://www.w3.org/2000/svg"  fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>
+        </a>
+    </header>
+    <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+            <button class="navbar-toggler C-Orange mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list col-1" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse px-5" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-sm-0 justify-content-around col-12">
+                    <li class="nav-item F-large-x col-12 col-sm-3">
+                        <a class="nav-link C-White" href="#">Home</a>
+                    </li>
+                    <li class="nav-item F-large-x col-12 col-sm-3">
+                        <a class="nav-link C-White" href="Hotel.html">Hotel</a>
+                    </li>
+                    <li class="nav-item F-large-x col-12 col-sm-3">
+                        <a class="nav-link C-White" href="Plane.html">Airplane</a>
+                    </li>
+                    <li class="nav-item F-large-x col-12 col-sm-3">
+                        <a class="nav-link C-White" href="Train.html">Train</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid justify-content-center row m-0">
+    <aside class="container-md col-10 col-md-2 sticky-md-top order-0 my-5 p-0">
+        <!-- Filtering data -->
+        <form  action="/Where_TO_SEnd Filter" method="get" class="p-0 pb-2 justify-content-center mt-0">
+            <h3 class="F-large C-White p-3 mt-0">Location</h3>
+            <input type="text" name="countryName" id="country-name" placeholder="Country name" size="14" class="F-small C-Orange col-11 p-2 mt-2">
+            <input type="text" name="cityName" id="city-name" placeholder="City name" size="14" class="F-small C-Orange col-11 p-2 mt-2">
+
+            <h3 class="F-large C-White p-3 mt-4">Date</h3>
+            <input type="date" name="startDate" id="start-date" size="14" value="2023-01-01" class="F-small C-Orange common col-11 col-md-5 p-2 mt-2">
+            <span class="F-medium C-White distance">-</span>
+            <input type="date" name="endDate" id="end-date" size="14" value="2023-12-12" class="F-small C-Orange common col-11 col-md-5 p-2 mt-2">
+
+            <h3 class="F-large C-White p-3 mt-4">Price</h3>
+            <input type="number" name="price" id="price-min" size="8" placeholder="from $" class="F-small C-Orange common col-11 col-md-5 p-2 mt-2">
+            <span class="F-large C-White distance">-</span>
+            <input type="number" name="price" id="price-max" size="8" placeholder="to $" class="F-small C-Orange common col-11 col-md-5 p-2 mt-2">
+
+            <h3 class="F-large C-White p-3 mt-4">General</h3>
+            <input type="number" name="passenger" id="passenger-num" size="8" max="100" placeholder="Passengers" class="F-small C-Orange col-11 p-2 mt-3">
+            <div class="C-Orange star-filter-parent col-8 my-0" style="display: inline-block">
+                <input type="radio" id="star-0-input" name="rating" value="0" class="star-filter-input hidden" checked>
+                <label class="star-filter" for="star-1-input">&#9733;</label>
+                <input type="radio" id="star-1-input" name="rating" value="1" class="star-filter-input hidden">
+                <label class="star-filter" for="star-2-input">&#9733;</label>
+                <input type="radio" id="star-2-input" name="rating" value="2" class="star-filter-input hidden">
+                <label class="star-filter" for="star-3-input">&#9733;</label>
+                <input type="radio" id="star-3-input" name="rating" value="3" class="star-filter-input hidden">
+                <label class="star-filter" for="star-4-input">&#9733;</label>
+                <input type="radio" id="star-4-input" name="rating" value="4" class="star-filter-input hidden">
+                <label class="star-filter" for="star-5-input">&#9733;</label>
+                <input type="radio" id="star-5-input" name="rating" value="5" class="star-filter-input hidden">
+            </div>
+            <div class="row justify-content-around">
+                <button type="reset" class="cancel-btn F-small C-Gray col-11 col-md-4 p-1 me-md-3">Cancel</button>
+                <button type="submit" class="submit-btn F-small C-Orange col-11 col-md-6 p-1">Apply</button>
+            </div>
+        </form>
+        <svg width="0" height="0" display="none">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="7" />
+                    <feColorMatrix mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 35 -7" />
+                    <feBlend in="SourceGraphic" />
+                </filter>
+            </defs>
+        </svg>
+    </aside>
+    <section class="container col-11 col-md-10 order-1">
+        <!-- list of hotels -->
+        <h1 class="C-White mx-4 py-4 mb-5">Best Hotels</h1>
+        <div class="container-fluid align-items-start justify-content-center row">
+            <div id="1234" class="reserve col-12 col-sm-6 col-md-4 col-lg-3 px-4">
+                <a href="Reserve.html?1234">
+                    <div class="image-star">
+                        <div class="progressing-bar"></div>
+                        <img src="..\SRC\hotel1.jpg" alt="hotel pic">
+                        <div class="star-rating F-small"><span class="star C-Black">&#9733;</span><span class="rating C-White">5</span></div>
+                    </div>
+                    <div class="description">
+                        <h5 class="C-White F-small">Acqualina-Florida-U.S.A</h5>
+                        <h5 class="F-small" style="color: gold">500$</h5>
+                    </div>
+                </a>
+            </div>
+            <div id="1235" class="reserve col-12 col-sm-6 col-md-4 col-lg-3 px-4">
+                <a href="Reserve.html?1235">
+                    <div class="image-star">
+                        <div class="progressing-bar"></div>
+                        <img src="..\SRC\hotel.jpg" alt="hotel pic">
+                        <div class="star-rating F-small"><span class="star C-Black">&#9733;</span><span class="rating C-White">4</span></div>
+                    </div>
+                    <div class="description">
+                        <h5 class="C-White F-small">Hotel name-city-country</h5>
+                        <h5 class="F-small" style="color: gold">000$</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    </div>
+    <footer aria-label="Page navigation" class="col-12 py-4 mb-3">
+        <ul id="Hotel" class="pagination justify-content-center mb-0">
+            <li class="page-item mx-1 mx-sm-2"><a href="Hotel.html?Prev" class="page-link">Prev</a></li>
+            <li class="page-item mx-1 mx-sm-2"><a href="Hotel.html?1" class="page-link">1</a></li>
+            <li class="page-item mx-1 mx-sm-2"><a href="Hotel.html?2" class="page-link">2</a></li>
+            <li class="page-item mx-1 mx-sm-2"><a href="Hotel.html?3" class="page-link">3</a></li>
+            <li class="page-item mx-1 mx-sm-2"><a href="Hotel.html?4" class="page-link">4</a></li>
+            <li class="page-item mx-1 mx-sm-2 hidden-sx"><a href="Hotel.html?5" class="page-link">5</a></li>
+            <li class="page-item mx-1 mx-sm-2 hidden-sx"><a href="Hotel.html?6" class="page-link">6</a></li>
+            <li class="page-item mx-1 mx-sm-2 hidden-sx"><a href="Hotel.html?7" class="page-link">7</a></li>
+            <li class="page-item mx-1 mx-sm-2"><a href="Hotel.html?Next" class="page-link">Next</a></li>
+        </ul>
+    </footer>
+</main>
+<script src="../JS/Bootstrap/bootstrap.bundle.js"></script>
+</body>
+</html>

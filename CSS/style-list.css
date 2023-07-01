@@ -161,6 +161,7 @@ footer {
     }
 }
 
+
 .star-filter-input:checked ~ label {
     color: white;
 }
@@ -181,7 +182,7 @@ input:hover, input:focus, input:active { border: 1px solid #DDD !important }
 
 .submit-btn:hover, .submit-btn:focus, .submit-btn:active,
 .cancel-btn:hover, .cancel-btn:focus, .cancel-btn:active {
-    transform: scale(1.2);
+    transform: scale(1.05);
     transition: transform 500ms ease;
 }
 

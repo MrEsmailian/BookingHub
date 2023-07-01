@@ -34,13 +34,25 @@ header > a {
     display: inline-block;
     width: 17.75% !important;
 }
+.link {
+    width: fit-content;
+}
+.link:hover {
+    color: #555;
+}
 /* Tablet */
 @media (min-width: 576px) {
-    header > a { width: 12.5% !important }
+    header > a { width: 10% !important }
+}
+@media (min-width: 768px) {
+    header > a { width: 7% !important }
 }
 /* Laptop */
-@media (min-width: 768px) {
-    header > a { width: 5.5% !important }
+@media (min-width: 992px) {
+    header > a {
+        width: 4vw !important;
+        height: 4vw !important;
+    }
 }
 /* Title ------------------------------------------------------ */
 
