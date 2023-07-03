@@ -1,0 +1,46 @@
+/* Profile -------------------------------------------------- */
+section {
+    height: fit-content;
+    background: linear-gradient(to bottom, #111, #444);
+    border-radius: 5px;
+}
+input {
+    background-color: inherit;
+    border: none;
+    border-bottom: orange solid 2px;
+}
+.form {
+    display: none;
+}
+#cancel-btn {
+    background: inherit;
+    text-align: center;
+    border-radius: 6px;
+    border: 2px solid #222;
+}
+#edit-btn, #send-btn {
+    text-align: center;
+    background: inherit;
+    border-radius: 6px;
+    border: 2px solid orange;
+    color: orange;
+}
+/* Profile -------------------------------------------------- */
+
+
+
+/* Animation ------------------------------------------------ */
+input:hover, input:active, input:focus,
+input:visited, input:focus-visible {
+    outline: none;
+}
+#form:checked ~ form .info {
+    display: none!important;
+}
+#form:checked ~ form .form {
+    display: flex!important;
+}
+#edit-btn:hover, #send-btn:hover, #cancel-btn:hover {
+    transform: scaleY(1.1) scaleX(1.05);
+}
+/* Animation ------------------------------------------------ */

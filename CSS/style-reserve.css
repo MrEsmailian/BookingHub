@@ -1,0 +1,59 @@
+/* Information -------------------------------------------------- */
+aside {
+    background: linear-gradient(to bottom, #111 50%, #333)!important;
+    border-radius: 5px!important;
+    box-shadow: 7px 10px 14px 5px #4e4e4e;
+}
+p {
+    display: inline-block;
+}
+/* Information -------------------------------------------------- */
+
+
+
+/* Form --------------------------------------------------------- */
+.entry input {
+    outline: 0;
+    background-color: inherit;
+    border: 2px solid orange;
+    box-shadow: 2px 0 3px orange;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    background-color: orange;
+    border-radius: 2px;
+}
+button {
+    text-align: center;
+    background: inherit;
+    border-radius: 6px;
+    border: 2px solid orange;
+    color: orange;
+}
+select {
+    background: inherit;
+    text-align: center;
+    border-radius: 6px;
+    border: 2px solid orange;
+    color: orange;
+}
+option {
+    background: black;
+}
+/* Form --------------------------------------------------------- */
+
+
+
+/* Animation ---------------------------------------------------- */
+@media (min-width: 768px) {
+    aside:hover {
+        transform: scale(1.07);
+        transition: all ease 1s;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        display: inherit;
+    }
+}
+/* Animation ---------------------------------------------------- */

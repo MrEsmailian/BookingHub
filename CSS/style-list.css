@@ -6,6 +6,7 @@ aside {
     height: fit-content;
     border: 1px solid #151515;
     background-color: #151515;
+    border-radius: 4px;
 }
 aside *:not([type="star-filter-input"]){
     margin: 0.7rem auto;
