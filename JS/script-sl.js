@@ -13,7 +13,7 @@ function logIn(){
         var entry = JSON.stringify(data);
     }
 }
-function signUp(){
+async function signUp() {
     let username = document.getElementById("SUsername").value;
     let first_name = "Mammad";
     let last_name = "kachal";
@@ -38,15 +38,17 @@ function signUp(){
         };
         var entry = JSON.stringify(data);
         sign(username, first_name, last_name, address, phone_number, email, password);
-        // var xhr = new XMLHttpRequest();
-        // xhr.open('POST', 'http://127.0.0.1:8000/api/account/', true);
-        // xhr.setRequestHeader('Content-Type', 'application/json');
-        // xhr.onreadystatechange = function (){
-        //     if (xhr.readyState === 4 && xhr.status === 201) {
-        //         alert(JSON.parse(xhr.responseText));
-        //     }
-        // }
-        // xhr.send(entry);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://127.0.0.1:8000/api/account', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onreadystatechange = function (){
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                alert(JSON.parse(xhr.responseText));
+            } else {
+                alert(xhr);
+            }
+        }
+        xhr.send(entry);
     }
 }
 function passStrength(){
@@ -68,30 +70,30 @@ function passStrength(){
 }
 
 function sign(username, first_name, last_name, address, phone_number, email, password) {
-    return new Promise((resolve, reject) => {
-        try {
-            $.ajax({
-                url: 'http:localhost:8000'/api/account,
-                type: 'POST',
-                data: JSON.stringify({ username, first_name, last_name, address, phone_number, email, password }),
-                contentType: 'application/json',
-            }).done((response) => {
-                if (response['authenticated']){
-                    resolve({state: 'done', content: response});
-                    alert(2);
-                }else{
-                    resolve({state: 'error', content: 'Email or password is incorrect'});
-                    alert(3);
-                }
-            }).fail((errorThrown) => {
-                reject({state: 'fail', content: errorThrown});
-                alert(4);
-            });
-        }catch(error) {
-            reject({state: 'catch', content: error});
-            alert(5);
-        }
-    });
+    // return new Promise((resolve, reject) => {
+    //     try {
+    //         $.ajax({
+    //             url: 'http:localhost:8000'/api/account,
+    //             type: 'POST',
+    //             data: JSON.stringify({ username, first_name, last_name, address, phone_number, email, password }),
+    //             contentType: 'application/json',
+    //         }).done((response) => {
+    //             if (response['authenticated']){
+    //                 resolve({state: 'done', content: response});
+    //                 alert(2);
+    //             }else{
+    //                 resolve({state: 'error', content: 'Email or password is incorrect'});
+    //                 alert(3);
+    //             }
+    //         }).fail((errorThrown) => {
+    //             reject({state: 'fail', content: errorThrown});
+    //             alert(4);
+    //         });
+    //     }catch(error) {
+    //         reject({state: 'catch', content: error});
+    //         alert(5);
+    //     }
+    // });
 }
 
 function toastFunction(msg) {
