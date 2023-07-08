@@ -10,14 +10,14 @@ body {
 * { box-sizing: border-box !important; }
 hr { border-color: rgba(255, 255, 255, 0.2) }
 .hidden { display: none }
-.F-small { font-size: 1.8rem }
-.F-medium { font-size: 2.1rem }
-.F-large { font-size: 2.4rem }
-.F-large-x { font-size: 2.7rem }
-.F-huge { font-size: 4rem }
+.F-small { font-size: 1.8rem !important;}
+.F-medium { font-size: 2.1rem !important;}
+.F-large { font-size: 2.4rem !important;}
+.F-large-x { font-size: 2.7rem !important;}
+.F-huge { font-size: 4rem !important;}
 .C-White { color: #DDD !important;}
-.C-Black { color: black }
-.C-Gray { color: #333 }
+.C-Black { color: black !important;}
+.C-Gray { color: #333 !important;}
 .C-Orange { color: orange !important;}
 a{ text-decoration: none !important;}
 /* General setting -------------------------------------------- */
@@ -106,3 +106,47 @@ nav {
     transform: translateX(-18%) translateY(-70%) scale(0.75);
 }
 /* Input fields ----------------------------------------------- */
+
+
+/* Snackbar --------------------------------------------------- */
+#toast {
+    visibility: hidden;
+    width: fit-content;
+    height: fit-content;
+    background-color: #333;
+    font-size: 1.8rem !important;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 20px;
+    bottom: 30px;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+/* Snackbar --------------------------------------------------- */
