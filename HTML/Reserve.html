@@ -60,21 +60,21 @@
         <h1 class="card-title C-White">Hotel Name</h1>
         <div class="container-fluid row justify-content-between">
           <div class="col-10 col-lg-10 px-0">
-            <p class="card-text C-White">Price <span class="C-Orange">100$</span></p>
+            <p class="card-text C-White">Price <span id="room-price" class="C-Orange"></span></p>
           </div>
           <div class="col-2 px-0">
-            <p class="card-text C-White">5<span class="C-Orange">&#9733;</span></p>
+            <p id="hotel-rating" class="card-text C-White">5<span class="C-Orange"></span></p>
           </div>
         </div>
         <hr style="border-top: 2px solid white">
-        <p class="card-text col-11 mx-auto C-White">address hsbdkj  dsbgkj bdfgkj nbd ffkjnkl sn  jng s knf sn rfnsknf</p>
-        <p class="card-text col-11 mx-auto C-White mb-2">description </p>
+        <p id="addr" class="card-text col-11 mx-auto C-White">address hsbdkj  dsbgkj bdfgkj nbd ffkjnkl sn  jng s knf sn rfnsknf</p>
+        <p id="desc" class="card-text col-11 mx-auto C-White mb-2">description </p>
       </div>
     </aside>
     <section class="container col-10 col-sm-6 col-md-7 col-lg-8 my-5 order-1">
       <h4 class="C-White mx-4 p-2 F-large">Reservation Form</h4>
       <hr style="border-top: 2px solid #ffffff">
-      <form id="sign" class="container-fluid row pt-4">
+      <form id="reserve" class="container-fluid row pt-4">
         <div class="entry row container col-11 F-medium justify-content-between mx-auto my-4">
           <label for="firstName" class="col-5 C-White">Name</label>
           <input type="text" name="firstName" id="firstName" required minlength="3" class="F-medium C-Orange col-7 px-3">
@@ -84,16 +84,16 @@
           <input type="text" name="lastName" id="lastName" required minlength="3" class="F-medium C-Orange col-7 px-3">
         </div>
         <div class="entry row container col-11 F-medium justify-content-between mx-auto my-4">
-          <label for="phone" class="col-5 C-White">Phone</label>
-          <input type="tel" name="phone" id="phone" required minlength="10" maxlength="12" class="F-medium C-Orange col-7 px-3">
-        </div>
-        <div class="entry row container col-11 F-medium justify-content-between mx-auto my-4">
           <label for="ID" class="col-5 C-White">ID</label>
           <input type="number" name="ID" id="ID" required minlength="10" maxlength="10" class="F-medium C-Orange col-7 px-3">
         </div>
         <div class="entry row container col-11 F-medium justify-content-between mx-auto my-4">
-          <label for="birthDate" class="col-5 C-White">BirthDate</label>
-          <input type="date" name="birthDate" id="birthDate" required minlength="3" class="F-medium C-Orange col-7 px-3">
+          <label for="checkIn" class="col-5 C-White">checkIn</label>
+          <input type="date" name="birthDate" id="checkIn" required class="F-medium C-Orange col-7 px-3">
+        </div>
+        <div class="entry row container col-11 F-medium justify-content-between mx-auto my-4">
+          <label for="checkOut" class="col-5 C-White">checkOut</label>
+          <input type="date" name="birthDate" id="checkOut" required class="F-medium C-Orange col-7 px-3">
         </div>
         <div class="entry row container col-11 F-medium justify-content-between mx-auto my-4">
           <label for="gender" class="col-5 C-White">Gender</label>
@@ -108,8 +108,9 @@
       </form>
     </section>
   </div>
-  <div id="snackbar"></div>
+  <div id="toast" style="z-index: 100000"></div>
 </main>
 <script src="../JS/Bootstrap/bootstrap.bundle.js"></script>
+<script src="../JS/script-r.js"></script>
 </body>
 </html>

@@ -122,6 +122,9 @@
             <div class="image-star">
               <div class="progressing-bar"></div>
               <img src="..\SRC\train1.jpg" alt="AirCo">
+              <video class="myVideo" preload="auto">
+                <source src="../SRC/tem.mp4" type="video/mp4">
+              </video>
               <div class="star-rating F-small"><span class="star C-Black">&#9733;</span><span class="rating C-White">3</span></div>
             </div>
             <div class="description">
@@ -149,5 +152,16 @@
   <div id="snackbar"></div>
 </main>
 <script src="../JS/Bootstrap/bootstrap.bundle.js"></script>
+<script>
+  var videos = document.getElementsByClassName("image-star");
+  for ( i = 0; i < videos.length; i++) {
+    videos[i].addEventListener('mouseover', function (){
+      this.getElementsByClassName("myVideo")[0].play();
+    });
+    videos[i].addEventListener('mouseout', function (){
+      this.getElementsByClassName("myVideo")[0].play();
+    });
+  }
+</script>
 </body>
 </html>

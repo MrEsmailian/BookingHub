@@ -57,35 +57,35 @@
     <input type="radio" name="infoForm" id="form" style="display: none">
     <input type="radio" name="infoForm" id="info" style="display: none">
     <h1 class="F-large-x C-White col-11 mx-auto mt-4 mb-5">Profile</h1>
-    <form id="sign">
+    <form id="profForm">
       <div class="row container col-9 F-medium justify-content-between mx-auto my-4">
-        <p class="col-4 C-White">Username</p><p class="col-7 info">Ali200</p>
+        <p class="col-4 C-White">Username</p><p class="col-7 info" id="usernameP"></p>
         <input type="text" name="user" id="username" minlength="3" class="F-medium C-Orange col-7 px-3 form">
       </div>
       <div class="row container col-9 F-medium justify-content-between mx-auto my-4">
-        <p class="col-4 C-White">First Name</p><p class="col-7 info">Alireza</p>
+        <p class="col-4 C-White">First Name</p><p class="col-7 info" id="firstnameP"></p>
         <input type="text" name="firstname" id="firstname" minlength="3" class="F-medium C-Orange col-7 px-3 form">
       </div>
       <div class="row container col-9 F-medium justify-content-between mx-auto my-4">
-        <p class="col-4 C-White">Last Name</p><p class="col-7 info">Mohammadi</p>
+        <p class="col-4 C-White">Last Name</p><p class="col-7 info" id="lastnameP"></p>
         <input type="text" name="lastname" id="lastname" minlength="4" class="F-medium C-Orange col-7 px-3 form">
       </div>
       <div class="row container col-9 F-medium justify-content-between mx-auto my-4">
-        <p class="col-4 C-White">Phone number</p><p class="col-7 info">9152156754</p>
+        <p class="col-4 C-White">Phone number</p><p class="col-7 info" id="phoneP"></p>
         <input  type="tel" name="phone" id="phone" minlength="10" maxlength="12" class="F-medium C-Orange col-7 px-3 form">
       </div>
       <div class="row container col-9 F-medium justify-content-between mx-auto my-4">
-        <p class="col-4 C-White">Email</p><p class="col-7 info">sthsth@gmail.com</p>
+        <p class="col-4 C-White">Email</p><p class="col-7 info" id="emailP"></p>
         <input type="email" name="email" id="email" minlength="8" class="F-medium C-Orange col-7 px-3 form">
       </div>
       <div class="row container col-9 F-medium justify-content-between mx-auto my-4">
-        <p class="col-4 C-White">Address</p><p class="col-7 info">p-blv-city</p>
+        <p class="col-4 C-White">Address</p><p class="col-7 info" id="addrP"></p>
         <input type="text" name="addr" id="addr" class="F-medium C-Orange col-7 px-3 form">
       </div>
-      <div class="row container col-9 F-medium justify-content-between mx-auto my-4">
-        <p class="col-4 C-White">Birth Day</p><p class="col-7 info">1997-11-08</p>
-        <input type="date" name="birth" id="birth" class="F-medium C-Orange col-7 px-3 form">
-      </div>
+<!--      <div class="row container col-9 F-medium justify-content-between mx-auto my-4">-->
+<!--        <p class="col-4 C-White">Birth Day</p><p class="col-7 info" ></p>-->
+<!--        <input type="date" name="birth" id="birth" class="F-medium C-Orange col-7 px-3 form">-->
+<!--      </div>-->
       <div class="row col-10 my-5 mx-auto F-large justify-content-center info">
         <label for="form" id="edit-btn" class="btn col-12 F-large">edit</label>
       </div>
@@ -96,8 +96,9 @@
     </form>
   </section>
   <button class="rotate mx-auto"><a href="MyReservations.html" class="C-Orange F-small">My Res..</a></button>
-  <div id="snackbar"></div>
+  <div id="toast"></div>
 </main>
 <script src="../JS/Bootstrap/bootstrap.bundle.js"></script>
+<script src="../JS/script-prof.js"></script>
 </body>
 </html>

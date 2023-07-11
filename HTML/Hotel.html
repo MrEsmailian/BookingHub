@@ -104,34 +104,6 @@
     <section class="container col-11 col-md-10 order-1">
         <!-- list of hotels -->
         <h1 class="C-White mx-4 py-4 mb-5">Best Hotels</h1>
-        <div class="container-fluid align-items-start justify-content-center row">
-            <div id="1234" class="reserve col-12 col-sm-6 col-md-4 col-lg-3 px-4">
-                <a href="Reserve.html?1234">
-                    <div class="image-star">
-                        <div class="progressing-bar"></div>
-                        <img src="..\SRC\hotel1.jpg" alt="hotel pic">
-                        <div class="star-rating F-small"><span class="star C-Black">&#9733;</span><span class="rating C-White">5</span></div>
-                    </div>
-                    <div class="description">
-                        <h5 class="C-White F-small">Acqualina-Florida-U.S.A</h5>
-                        <h5 class="F-small" style="color: gold">500$</h5>
-                    </div>
-                </a>
-            </div>
-            <div id="1235" class="reserve col-12 col-sm-6 col-md-4 col-lg-3 px-4">
-                <a href="Reserve.html?1235">
-                    <div class="image-star">
-                        <div class="progressing-bar"></div>
-                        <img src="..\SRC\hotel.jpg" alt="hotel pic">
-                        <div class="star-rating F-small"><span class="star C-Black">&#9733;</span><span class="rating C-White">4</span></div>
-                    </div>
-                    <div class="description">
-                        <h5 class="C-White F-small">Hotel name-city-country</h5>
-                        <h5 class="F-small" style="color: gold">000$</h5>
-                    </div>
-                </a>
-            </div>
-        </div>
     </section>
     </div>
     <footer aria-label="Page navigation" class="col-12 py-4 mb-3">
@@ -148,7 +120,20 @@
         </ul>
     </footer>
     <div id="snackbar"></div>
+    <div id="style"></div>
 </main>
 <script src="../JS/Bootstrap/bootstrap.bundle.js"></script>
+<script src="../JS/script-hotel.js"></script>
+<script>
+    var videos = document.getElementsByClassName("image-star");
+    for ( i = 0; i < videos.length; i++) {
+        videos[i].addEventListener('mouseover', function (){
+            this.getElementsByClassName("myVideo")[0].play();
+        });
+        videos[i].addEventListener('mouseout', function (){
+            this.getElementsByClassName("myVideo")[0].play();
+        });
+    }
+</script>
 </body>
 </html>
